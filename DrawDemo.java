@@ -85,4 +85,19 @@ public class DrawDemo
     {
         myCanvas.erase();
     }
+    
+    /**
+     * Dibuja un triángulo verde en las coordenadas que el usuario
+     * introduzca por parámetro.
+     * @param x Posición de la x (en pixels).
+     * @param y Posición de la y (en pixels).
+     */
+    public void drawTriangle(int x, int y) {
+        Pen pen = new Pen(x, y, myCanvas);
+        pen.setColor(Color.GREEN);
+        for (int i=0; i<3; i++) {
+            pen.move(-100);
+            pen.turn(120);
+        }
+    }
 }
