@@ -112,4 +112,22 @@ public class DrawDemo
             pen.turn(72);
         }
     }
+    
+    /**
+     * Dibuja un polígono regular de "n" lados.
+     * @param n Número de lados del polígono.
+     */
+    public void drawPolygon(int n) {
+        if(n > 2) {
+            Pen pen = new Pen(275, 390, myCanvas);
+            pen.setColor(Color.GREEN);
+            for (int i=0; i<n; i++) {
+                pen.move(-50);
+                pen.turn(360/n);
+            }
+        }
+        else {
+            System.out.println("Error: El número de lados escogido es insuficiente para crear un polígono.");
+        }
+    }
 }
