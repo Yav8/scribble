@@ -130,4 +130,19 @@ public class DrawDemo
             System.out.println("Error: El número de lados escogido es insuficiente para crear un polígono.");
         }
     }
+    
+    /**
+     * Dibuja una espiral.
+     */
+    public void drawSpiral() {
+        Pen pen = new Pen(150, 100, myCanvas);
+        pen.setColor(Color.BLACK);
+        pen.turn(-270);
+        int distancia = 200;
+        while (distancia > 0) {
+            distancia = distancia - 4;
+            pen.move(distancia);
+            pen.turn(-90);
+        }
+    }
 }
